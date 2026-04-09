@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CIVIX BOOSTER</title>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="CIVIX">
+        <span></span>
+    </div>
+</div>
+
+<style>
+
+    .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo span {
+    color: #ff1a1a;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+body {
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HERO */
+.hero {
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1 {
+    font-size:55px;
+    color:#ff1a1a;
+    letter-spacing:3px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow:0 0 10px red; }
+    to { text-shadow:0 0 30px red; }
+}
+
+/* BUTTON */
+.btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 40px;
+    border:2px solid #ff1a1a;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn:hover {
+    background:#ff1a1a;
+    color:black;
+}
+
+/* IMAGE POPUP */
+.image-box {
+    text-align:center;
+    margin-top:50px;
+    animation: popup 1s ease;
+}
+
+@keyframes popup {
+    from { transform: scale(0.5); opacity:0; }
+    to { transform: scale(1); opacity:1; }
+}
+
+.image-box img {
+    width:70%;
+    border-radius:20px;
+    box-shadow:0 0 30px red;
+}
+
+/* FEATURES */
+.features {
+    margin-top:80px;
+    text-align:center;
+}
+
+.feature {
+    opacity:0;
+    transform:translateY(50px);
+    animation: slideUp 1s forwards;
+}
+
+.feature:nth-child(1){ animation-delay:0.3s; }
+.feature:nth-child(2){ animation-delay:0.6s; }
+.feature:nth-child(3){ animation-delay:0.9s; }
+
+@keyframes slideUp {
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* DESCRIPTION */
+.desc {
+    padding:60px;
+    line-height:1.7;
+    color:#bbb;
+}
+
+/* DISCORD */
+.discord {
+    text-align:center;
+    margin:50px;
+}
+
+.discord img {
+    width:60px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.discord img:hover {
+    transform:scale(1.2);
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>CIVIX BOOSTER</h1>
+    <p>Ultimate Gaming Optimization Tool</p>
+
+    <a href="civix_booster.exe" class="btn">Download Now</a>
+</div>
+
+<!-- IMAGE -->
+<div class="image-box">
+    <img src="image.png" alt="app preview">
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+    <h2>Features</h2>
+
+    <div class="feature">🚀 Game Booster Mode</div>
+    <div class="feature">🧹 Temp Cleaner</div>
+    <div class="feature">📊 Live System Monitor</div>
+</div>
+
+<!-- DESCRIPTION -->
+<div class="desc">
+    <h2>About CIVIX BOOSTER</h2>
+    <p>
+    CIVIX BOOSTER is a powerful PC optimization tool designed for gamers and performance enthusiasts. 
+    It helps improve system responsiveness, clean unnecessary files, and optimize your PC for maximum performance.
+    
+    With a single click, users can activate game boost mode, which reduces background processes, 
+    enhances system speed, and improves gaming performance.
+    
+    The built-in system monitor provides real-time statistics of CPU, RAM, and disk usage, 
+    allowing users to track their system performance live.
+    
+    The temp cleaner safely removes junk files and frees up storage space.
+    
+    CIVIX BOOSTER is built with a modern gaming-style interface, ensuring both performance and aesthetics.
+    </p>
+</div>
+
+<!-- DISCORD -->
+<div class="discord">
+    <h2>Join Our Community</h2>
+    <a href="https://discord.gg/YOUR_LINK" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
+    </a>
+</div>
+
+<footer>
+    CIVIX © 2026
+</footer>
+
+</body>
+</html>
