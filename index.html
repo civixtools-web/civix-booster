@@ -4,215 +4,213 @@
 <meta charset="UTF-8">
 <title>CIVIX BOOSTER</title>
 
-<!-- NAVBAR -->
-<div class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="CIVIX">
-        <span></span>
-    </div>
-</div>
-
 <style>
 
-    .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 25px 40px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
+    .desc-section {
+    margin-top: 80px;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #050505, #0a0000);
+}
+
+.desc-title {
+    color: #ff1a1a;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff1a1a;
+}
+
+.desc-text {
+    max-width: 700px;
+    margin: auto;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #ff1a1a;
+    font-weight: bold;
+}
+
+.desc-features {
+    margin-top: 30px;
     display: flex;
-    align-items: center;
-    z-index: 1000;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.feature-box {
+    background: #0a0a0a;
+    padding: 12px 20px;
+    border: 1px solid #111;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    box-shadow: 0 0 15px #ff1a1a;
+    transform: scale(1.05);
+}
+body {
+    margin: 0;
+    background: #050505;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    width: 40px;
-    height: 40px;
-}
-
-.logo span {
     color: #ff1a1a;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    letter-spacing: 2px;
-}
-
-body {
-    margin:0;
-    font-family: "Segoe UI", sans-serif;
-    background:#050505;
-    color:white;
-    overflow-x:hidden;
 }
 
 /* HERO */
 .hero {
-    text-align:center;
-    padding:100px 20px;
+    text-align: center;
+    margin-top: 80px;
 }
 
-.hero h1 {
-    font-size:55px;
-    color:#ff1a1a;
-    letter-spacing:3px;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from { text-shadow:0 0 10px red; }
-    to { text-shadow:0 0 30px red; }
+.hero img {
+    width: 200px;
+    animation: pop 1s ease;
 }
 
 /* BUTTON */
 .btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 40px;
-    border:2px solid #ff1a1a;
-    border-radius:40px;
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: 2px solid #ff1a1a;
+    background: transparent;
+    color: white;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background:#ff1a1a;
-    color:black;
+    background: #ff1a1a;
+    box-shadow: 0 0 20px #ff1a1a;
 }
 
-/* IMAGE POPUP */
-.image-box {
-    text-align:center;
-    margin-top:50px;
-    animation: popup 1s ease;
+/* GALLERY */
+.gallery {
+    margin-top: 80px;
+    text-align: center;
 }
 
-@keyframes popup {
-    from { transform: scale(0.5); opacity:0; }
-    to { transform: scale(1); opacity:1; }
+.gallery img {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #111;
+    transition: 0.3s;
 }
 
-.image-box img {
-    width:70%;
-    border-radius:20px;
-    box-shadow:0 0 30px red;
-}
-
-/* FEATURES */
-.features {
-    margin-top:80px;
-    text-align:center;
-}
-
-.feature {
-    opacity:0;
-    transform:translateY(50px);
-    animation: slideUp 1s forwards;
-}
-
-.feature:nth-child(1){ animation-delay:0.3s; }
-.feature:nth-child(2){ animation-delay:0.6s; }
-.feature:nth-child(3){ animation-delay:0.9s; }
-
-@keyframes slideUp {
-    to {
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* DESCRIPTION */
-.desc {
-    padding:60px;
-    line-height:1.7;
-    color:#bbb;
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff1a1a;
 }
 
 /* DISCORD */
 .discord {
-    text-align:center;
-    margin:50px;
+    margin-top: 60px;
+    text-align: center;
 }
 
 .discord img {
-    width:60px;
-    cursor:pointer;
-    transition:0.3s;
+    width: 70px;
+    cursor: pointer;
 }
 
 .discord img:hover {
-    transform:scale(1.2);
+    transform: scale(1.2);
 }
 
-/* FOOTER */
-footer {
-    text-align:center;
-    padding:20px;
-    color:#666;
+/* ANIM */
+@keyframes pop {
+    from {transform: scale(0.5); opacity:0;}
+    to {transform: scale(1); opacity:1;}
 }
 </style>
 </head>
 
 <body>
 
+<div class="nav">
+    <div class="logo">CIVIX BOOSTER</div>
+</div>
+
 <div class="hero">
-    <h1>CIVIX BOOSTER</h1>
-    <p>Ultimate Gaming Optimization Tool</p>
+    <!-- LOGO -->
+    <img src="logo.png">
 
-    <a href="civix_booster.exe" class="btn">Download Now</a>
+    <h1 style="color:#ff1a1a;">CIVIX BOOSTER</h1>
+
+    <p>Ultimate FPS Boost Tool for Gamers 🚀</p>
+
+    <button class="btn" onclick="download()">DOWNLOAD</button>
 </div>
 
-<!-- IMAGE -->
-<div class="image-box">
-    <img src="image.png" alt="app preview">
+<!-- 🖼️ DASHBOARD IMAGES -->
+<div class="gallery">
+    <h2 style="color:#ff1a1a;">APP PREVIEW</h2>
+
+    <img src="1.png">
+    <img src="2.png">
+    <img src="3.png">
 </div>
+<!-- 🔥 DESCRIPTION SECTION -->
+<div class="desc-section">
 
-<!-- FEATURES -->
-<div class="features">
-    <h2>Features</h2>
+    <h2 class="desc-title">ABOUT CIVIX BOOSTER</h2>
 
-    <div class="feature">🚀 Game Booster Mode</div>
-    <div class="feature">🧹 Temp Cleaner</div>
-    <div class="feature">📊 Live System Monitor</div>
-</div>
-
-<!-- DESCRIPTION -->
-<div class="desc">
-    <h2>About CIVIX BOOSTER</h2>
-    <p>
-    CIVIX BOOSTER is a powerful PC optimization tool designed for gamers and performance enthusiasts. 
-    It helps improve system responsiveness, clean unnecessary files, and optimize your PC for maximum performance.
-    
-    With a single click, users can activate game boost mode, which reduces background processes, 
-    enhances system speed, and improves gaming performance.
-    
-    The built-in system monitor provides real-time statistics of CPU, RAM, and disk usage, 
-    allowing users to track their system performance live.
-    
-    The temp cleaner safely removes junk files and frees up storage space.
-    
-    CIVIX BOOSTER is built with a modern gaming-style interface, ensuring both performance and aesthetics.
+    <p class="desc-text">
+        CIVIX BOOSTER is a next-generation PC optimization and gaming performance tool designed for serious gamers.
+        It boosts FPS, reduces lag, and maximizes system performance with a powerful one-click optimization system.
     </p>
-</div>
 
-<!-- DISCORD -->
+    <p class="desc-text">
+        With <span class="highlight">Extreme Game Mode</span>, all unnecessary background apps are automatically closed,
+        leaving only essential applications like your emulator and Discord running for maximum performance.
+    </p>
+
+    <p class="desc-text">
+        The built-in <span class="highlight">Emulator Optimizer</span> configures OpenGL, RAM, and DPI settings automatically,
+        giving you smoother gameplay without manual setup.
+    </p>
+
+    <!-- FEATURES LIST -->
+    <div class="desc-features">
+        <div class="feature-box">⚡ One Click Boost</div>
+        <div class="feature-box">🔥 Game Mode</div>
+        <div class="feature-box">🎮 Emulator Optimization</div>
+        <div class="feature-box">📊 Live Monitor</div>
+        <div class="feature-box">🧹 Temp Cleaner</div>
+    </div>
+
+</div>
+<!-- 💬 DISCORD -->
 <div class="discord">
-    <h2>Join Our Community</h2>
-    <a href="https://discord.gg/bfpV9s6twu" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
-    </a>
+    <p>Join Discord</p>
+
+    <!-- FIXED DISCORD LOGO (ONLINE LINK) -->
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" onclick="discord()">
 </div>
 
-<footer>
-    CIVIX © 2026
-</footer>
+<script>
+function download() {
+    window.location.href = "your-exe-link.exe";
+}
+
+function discord() {
+    window.open("https://discord.gg/2wvm9ArK8P");
+}
+</script>
 
 </body>
 </html>
